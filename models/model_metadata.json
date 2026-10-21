@@ -1,0 +1,111 @@
+{
+  "model_type": "DecisionTreeClassifier",
+  "algorithm": "Decision Tree (CART via Gini Impurity)",
+  "feature_names": [
+    "household_size",
+    "number_of_appliances",
+    "average_daily_usage_hours",
+    "ac_usage_hours_per_day"
+  ],
+  "target_name": "usage_category",
+  "class_labels": [
+    "Low",
+    "Medium",
+    "High"
+  ],
+  "hyperparameters": {
+    "criterion": "gini",
+    "max_depth": 4,
+    "min_samples_split": 8,
+    "min_samples_leaf": 4,
+    "random_state": 42
+  },
+  "dataset_statistics": {
+    "total_records": 800,
+    "train_samples": 640,
+    "test_samples": 160,
+    "class_distribution": {
+      "Low": 262,
+      "Medium": 292,
+      "High": 246
+    }
+  },
+  "metrics": {
+    "train_accuracy": 0.9656,
+    "test_accuracy": 0.9688,
+    "precision_macro": 0.9708,
+    "recall_macro": 0.9687,
+    "f1_macro": 0.9695,
+    "precision_weighted": 0.9693,
+    "recall_weighted": 0.9688,
+    "f1_weighted": 0.9688
+  },
+  "confusion_matrix": {
+    "labels": [
+      "Low",
+      "Medium",
+      "High"
+    ],
+    "matrix": [
+      [
+        51,
+        1,
+        0
+      ],
+      [
+        2,
+        57,
+        0
+      ],
+      [
+        0,
+        2,
+        47
+      ]
+    ]
+  },
+  "classification_report": {
+    "Low": {
+      "precision": 0.9622641509433962,
+      "recall": 0.9807692307692307,
+      "f1-score": 0.9714285714285714,
+      "support": 52.0
+    },
+    "Medium": {
+      "precision": 0.95,
+      "recall": 0.9661016949152542,
+      "f1-score": 0.957983193277311,
+      "support": 59.0
+    },
+    "High": {
+      "precision": 1.0,
+      "recall": 0.9591836734693877,
+      "f1-score": 0.9791666666666666,
+      "support": 49.0
+    },
+    "accuracy": 0.96875,
+    "macro avg": {
+      "precision": 0.970754716981132,
+      "recall": 0.9686848663846241,
+      "f1-score": 0.9695261437908497,
+      "support": 160.0
+    },
+    "weighted avg": {
+      "precision": 0.9692983490566037,
+      "recall": 0.96875,
+      "f1-score": 0.9688403799019607,
+      "support": 160.0
+    }
+  },
+  "feature_importances": {
+    "household_size": 0.0195,
+    "number_of_appliances": 0.4608,
+    "average_daily_usage_hours": 0.0006,
+    "ac_usage_hours_per_day": 0.5191
+  },
+  "thresholds_kwh": {
+    "low_threshold": 10.0,
+    "high_threshold": 22.0
+  },
+  "synthetic_data_notice": "Model trained on simulated educational data. For demonstration purposes only."
+}

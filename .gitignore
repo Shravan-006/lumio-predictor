@@ -1,0 +1,17 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Large backup archives
+*.zip
+backup_stable_state/
+
+# IDE files
+.vscode/
+.idea/
